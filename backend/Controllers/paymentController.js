@@ -6,7 +6,7 @@ exports.processPayment = catchAsyncError(async (req, res, next) => {
     amount: req.body.amount,
     currency: "inr",
     metadata: {
-      company: "gour shopiji",
+      company: "Ecommerce",
     },
   });
   return res
