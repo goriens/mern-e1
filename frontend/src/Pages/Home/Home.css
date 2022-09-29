@@ -1,0 +1,27 @@
+.card-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.5rem;
+  cursor: pointer;
+}
+
+.slider-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .card-grid {
+    grid-template-columns: auto auto;
+    margin: 5%;
+  }
+}
+@media (max-width: 479px) {
+  .card-grid {
+    grid-template-columns: auto;
+    margin: 5%;
+  }
+}
