@@ -1,7 +1,8 @@
 const app = require("./app");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const connect = require("./Config/db");
 const cloudinary = require("cloudinary");
+const port = process.env.PORT || 5000;
 
 //handle uncaught exception
 process.on("uncaughtException", (err) => {
@@ -9,12 +10,12 @@ process.on("uncaughtException", (err) => {
   console.log("shuting down server uncaught exception");
   process.exit(1);
 });
-dotenv.config({ path: "backend/config/config.env" });
+// dotenv.config({ path: "backend/config/config.env" });
 
 //connect db and server
-const server = app.listen(process.env.PORT, async () => {
+const server = app.listen(port, async () => {
   await connect();
-  console.log(`Server is Listening on port ${process.env.PORT}`);
+  console.log(`Server is Listening on port ${port}`);
 });
 // cloud file upload
 cloudinary.config({
