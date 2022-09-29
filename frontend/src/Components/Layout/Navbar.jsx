@@ -266,12 +266,10 @@ export const Navbar = () => {
             ) : (
               <Stack direction="row" spacing={1}>
                 <NavLink to="/register">
-                  <Button variant="contained" size="large">
-                    Register
-                  </Button>
+                  <Button variant="contained">Join</Button>
                 </NavLink>
                 <NavLink to="/login">
-                  <Button variant="contained" color="success" size="large">
+                  <Button variant="contained" color="success">
                     Login
                   </Button>
                 </NavLink>
