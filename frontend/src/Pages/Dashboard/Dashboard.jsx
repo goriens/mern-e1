@@ -38,16 +38,16 @@ export const Dashboard = () => {
     });
 
   useEffect(() => {
-    if (orders.length === 0) {
+    if (orders?.length === 0) {
       dispatch(getAllOrders());
     }
-    if (users.length === 0) {
+    if (users?.length === 0) {
       dispatch(getAllUsers());
     }
     if (products?.length === 0) {
       dispatch(getAllProductAdmin());
     }
-  }, [dispatch, products?.length, orders.length, users.length]);
+  }, [dispatch, products?.length, orders?.length, users?.length]);
 
   const data = [
     {

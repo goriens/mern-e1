@@ -28,6 +28,7 @@ import { NewProduct } from "./Admin/NewProduct";
 import { UpdateProductAdmin } from "./Admin/UpdateProductAdmin";
 import { UpdateOrderAdmin } from "./Admin/UpdateOrderAdmin";
 import { UpdateUserAdmin } from "./Admin/UpdateUserAdmin";
+import { NotFound } from "./NotFound";
 
 export const AllRoutes = () => {
   const [stripeApiKey, setStripeApiKey] = useState("");
@@ -78,6 +79,7 @@ export const AllRoutes = () => {
         <Route path="/admin/users" element={<AdminUser />} />
         <Route path="/admin/user/:id" element={<UpdateUserAdmin />} />
         <Route path="/admin/reviews" element={<AdminReviews />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

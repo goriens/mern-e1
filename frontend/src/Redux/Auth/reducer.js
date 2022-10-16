@@ -16,7 +16,6 @@ export const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: true,
-        isAuth: false,
         isError: false,
       };
     case Types.LOGIN_SUCCESS_SUCCESS:
@@ -41,13 +40,11 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         isError: payload,
-        isAuth: false,
       };
     case Types.USER_PROFILE_FAILURE:
       return {
         ...state,
         isLoading: false,
-        isAuth: false,
       };
     case Types.USER_LOGOUT_SUCCESS:
       return {

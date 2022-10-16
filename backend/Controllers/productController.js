@@ -135,7 +135,6 @@ exports.deleteProduct = catchAsyncError(async (req, res, next) => {
 });
 
 //create new review or update the review
-
 exports.createProductReview = catchAsyncError(async (req, res, next) => {
   const { rating, comment, productId } = req.body;
   const review = {

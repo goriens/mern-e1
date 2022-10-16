@@ -21,7 +21,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 const theme = createTheme();
 
 export const Register = () => {
-  const { isLoading, isError, isAuth, user } = useSelector(
+  const { isLoading, isError, isAuth } = useSelector(
     (state) => state.authReducer
   );
 
@@ -65,7 +65,6 @@ export const Register = () => {
       }
     });
   };
-  console.log("user", user);
 
   const registerDataChange = (e) => {
     if (e.target.name === "avatar") {
@@ -113,8 +112,9 @@ export const Register = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            height: "90vh",
             justifyContent: "center",
+            mt: "4.5rem",
+            mb: "5rem",
           }}
         >
           <Typography component="h1" variant="h4">

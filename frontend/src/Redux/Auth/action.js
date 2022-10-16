@@ -38,23 +38,6 @@ export const registerUser = (payload) => (dispatch) => {
       return Types.REGISTER_SUCCESS_FAILURE;
     });
 };
-// export const registerUser = (userData) => async (dispatch) => {
-//   try {
-//     dispatch({ type: Types.REGISTER_SUCCESS_REQUEST });
-
-//     const config = { headers: { "Content-Type": "multipart/form-data" } };
-
-//     const { data } = await axios.post(`/api/v1/register`, userData, config);
-
-//     dispatch({ type: Types.REGISTER_SUCCESS_SUCCESS, payload: data });
-//     return Types.REGISTER_SUCCESS_SUCCESS;
-//   } catch (error) {
-//     dispatch({
-//       type: Types.REGISTER_SUCCESS_FAILURE,
-//       payload: error.response.data,
-//     });
-//   }
-// };
 
 export const getProfile = () => (dispatch) => {
   dispatch({ type: Types.USER_PROFILE_REQUEST });
