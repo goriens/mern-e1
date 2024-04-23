@@ -1,11 +1,9 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
-const dotenv = require("dotenv");
 const path = require("path");
 
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
-dotenv.config({ path: "backend/config/config.env" });
 
 const errorMiddleware = require("./Middleware/error");
 const product = require("./Routes/productRoutes");
